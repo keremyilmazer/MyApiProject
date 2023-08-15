@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DtoLayer.Dtos.TestimonialDto
 {
-    internal class AddTestimonialDto
+    public class AddTestimonialDto
     {
     }
 }
