@@ -8,5 +8,18 @@ namespace HotelProject.WebUI.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public PartialViewResult AddBooking()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddBooking(string x)
+        {
+            return View();
+        }
+
     }
 }
