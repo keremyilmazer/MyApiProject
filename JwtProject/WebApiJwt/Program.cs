@@ -20,7 +20,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidAudience = "http://localhost",
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("aspnetcoreapiapi")),
         ValidateIssuerSigningKey = true,
-        ValidateLifetime = true
+        ValidateLifetime = true,
+        ClockSkew=TimeSpan.Zero
     };
 });
 var app = builder.Build();
