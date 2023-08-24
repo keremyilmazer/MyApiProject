@@ -42,7 +42,7 @@ namespace HotelProject.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createSendMessage);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://localhost:5167/api/SendMessage", stringContent);
+            var responseMessage = await client.PostAsync("http://localhost:5167/api/AddSendMessage", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("SendBox");
