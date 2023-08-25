@@ -16,7 +16,7 @@ namespace HotelProject.WebUI.Controllers
         public IActionResult Index(AdminMailViewModel model)
         {
             MimeMessage mimeMessage=new MimeMessage();
-            MailboxAddress mailboxAddressFrom = new MailboxAddress("HoteierAdmin", "burası bizim mailimiz");
+            MailboxAddress mailboxAddressFrom = new MailboxAddress("HoteierAdmin", "keremyilmazerrr@gmail.com");
             mimeMessage.From.Add(mailboxAddressFrom);
 
             MailboxAddress mailboxAddressTo = new MailboxAddress("User", model.ReceiverMail);
@@ -29,8 +29,8 @@ namespace HotelProject.WebUI.Controllers
             mimeMessage.Subject=model.Subject;
 
             SmtpClient client = new SmtpClient();
-            client.Connect("smtp.gmail.com", 587, false);
-            client.Authenticate("mail", "password key");
+            client.Connect("keremyilmazerrr@gmail.com", 587, false);
+            client.Authenticate("mail", "dxgfsyydwckylmjy");
             client.Send(mimeMessage);
             client.Disconnect(true);
             return View();
