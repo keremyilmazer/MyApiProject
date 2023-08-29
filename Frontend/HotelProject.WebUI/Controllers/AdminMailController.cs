@@ -29,10 +29,13 @@ namespace HotelProject.WebUI.Controllers
             mimeMessage.Subject=model.Subject;
 
             SmtpClient client = new SmtpClient();
-            client.Connect("keremyilmazerrr@gmail.com", 587, false);
-            client.Authenticate("mail", "dxgfsyydwckylmjy");
+            client.Connect("smtp.gmail.com", 587, false);
+            client.Authenticate("keremyilmazerrr@gmail.com", "dxgfsyydwckylmjy");
             client.Send(mimeMessage);
             client.Disconnect(true);
+
+            //Gönderilen Mailin Veri Tabanına Kaydedilmesi
+
             return View();
         }
     }
