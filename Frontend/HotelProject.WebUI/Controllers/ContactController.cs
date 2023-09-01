@@ -19,6 +19,7 @@ namespace HotelProject.WebUI.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.v = "selamlar";
             return View();
         }
 
